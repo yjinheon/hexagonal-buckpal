@@ -19,6 +19,6 @@ public record SendMoneyCommand(
         if (!money.isPositive()) {
             throw new IllegalArgumentException("Money must be positive");
         }
-        // SelfValidating 등을 상속받아 Bean Validation을 활용할 수도 있습니다.
+        // SelfValidating 등을 상속받아 Bean Validation을 활용 가능
     }
 }
