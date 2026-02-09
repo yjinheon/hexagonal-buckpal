@@ -24,7 +24,7 @@ class ActivityEntity {
 
     private Long sourceAccountId;
 
-    private Long tartgetAccountId;
+    private Long targetAccountId;
 
     private Long amount;
 
