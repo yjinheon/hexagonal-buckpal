@@ -2,15 +2,18 @@ package io.reflectoring.buckpal.account.application.service;
 
 
 import io.reflectoring.buckpal.account.application.port.in.SendMoneyCommand;
+import io.reflectoring.buckpal.account.application.port.in.SendMoneyService;
+import io.reflectoring.buckpal.account.application.port.out.LoadAccountPort;
+import io.reflectoring.buckpal.account.application.port.out.UpdateAccountStatePort;
 import io.reflectoring.buckpal.account.domain.Account;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
-@Service // Spring의 관리 대상이 됨
+@Service
 @Transactional
-public class SendMoneyService implements SendMoneyUseCase {
+public class AccountSendMoneyService implements SendMoneyService {
 
     // Out Port(인터페이스)에 의존. 구현체(DB 어댑터)는 모름.
     private final LoadAccountPort loadAccountPort;
